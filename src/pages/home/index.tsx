@@ -167,7 +167,7 @@ function Home() {
           <div className="cards-wrapper">
             {/* TOP ROW */}
             <div className="cards-track">
-              {[...cards, ...cards].map((item, index) => (
+              {[...data, ...data].map((item, index) => (
                 <div className="why-card" key={index}>
                   <div className="why-box">
                     <img src={item.icon} alt="icon" className="icon-img" />
@@ -180,9 +180,11 @@ function Home() {
 
             {/* BOTTOM ROW */}
             <div className="cards-track reverse">
-              {[...cards, ...cards].map((item, index) => (
+              {[...data, ...data].map((item, index) => (
                 <div className="why-card" key={index}>
-                  <div className="why-box">{item.icon}</div>
+                  <div className="why-box">
+                    <img src={item.icon} alt="icon" className="icon-img" />
+                  </div>
                   <h6 className="fw-bold mt-3">{item.title}</h6>
                   <p className="text-muted small">{item.desc}</p>
                 </div>
