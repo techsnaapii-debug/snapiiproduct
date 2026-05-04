@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Home from "../../../public/static/images/home.png";
-import detail from "../../../public/static/images/detail-1.jpeg";
-const Details = () => {
+import detail from "../../../public/static/images/detail-3.jpeg";
+const Detail2 = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ const Details = () => {
       {/* TOP GRADIENT SECTION */}
       <div className="details-header text-center text-white">
         <h2 className="fw-bold">
-   Creator Experience Comparison: Snaapii vs Other Platforms
+          Growth Tools Comparison: Snaapii vs Other Platforms
         </h2>
         <p className="mt-2">April 15, 2026</p>
       </div>
@@ -24,26 +24,25 @@ const Details = () => {
           {/* TEXT CONTENT */}
           <div className="details-content">
             <p>
-              Creators often struggle on traditional platforms because they have
-              little control over pricing, communication, and opportunities.
-              Some platforms only show limited campaigns or require agency
-              involvement, which reduces creator freedom. Snaapii is designed to
-              put creators first. Creators can apply to campaigns, negotiate
-              directly, manage their deals, and build long-term partnerships
-              with brands. This gives them more control over income and career
-              growth.
+              Most traditional influencer platforms only connect brands and
+              creators. They rarely offer tools that help users grow faster.
+              Manual outreach, repetitive tasks, and slow workflows remain
+              common problems.
             </p>
 
             <p>
-              The platform also helps creators increase visibility and attract
-              better opportunities. With automation tools and smarter systems,
-              creators can focus more on content and less on chasing deals
-              manually.
+              Snaapii goes beyond simple matchmaking by offering growth-focused
+              tools such as Smart Auto DM, automation systems, and AI-powered
+              recommendations. These tools help creators reach brands faster and
+              help brands scale outreach more efficiently. Automation saves
+              valuable time, improves productivity, and increases opportunities.
+              AI recommendations also help users make smarter decisions by
+              finding relevant partnerships quickly.
             </p>
 
             <p>
-              Compared to many influencer marketplaces, Snaapii creates a more
-              empowering experience for creators.
+              While many platforms stay basic, Snaapii gives users the tools
+              needed for modern growth.
             </p>
 
             {/* BACK BUTTON */}
@@ -97,4 +96,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default Detail2;

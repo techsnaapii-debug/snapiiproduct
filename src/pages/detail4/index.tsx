@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Home from "../../../public/static/images/home.png";
-import detail from "../../../public/static/images/detail-1.jpeg";
-const Details = () => {
+import detail from "../../../public/static/images/detail-5.jpeg";
+const Detail4 = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ const Details = () => {
       {/* TOP GRADIENT SECTION */}
       <div className="details-header text-center text-white">
         <h2 className="fw-bold">
-   Creator Experience Comparison: Snaapii vs Other Platforms
+          Cost Comparison: Snaapii vs Other Platforms.
         </h2>
         <p className="mt-2">April 15, 2026</p>
       </div>
@@ -24,26 +24,27 @@ const Details = () => {
           {/* TEXT CONTENT */}
           <div className="details-content">
             <p>
-              Creators often struggle on traditional platforms because they have
-              little control over pricing, communication, and opportunities.
-              Some platforms only show limited campaigns or require agency
-              involvement, which reduces creator freedom. Snaapii is designed to
-              put creators first. Creators can apply to campaigns, negotiate
-              directly, manage their deals, and build long-term partnerships
-              with brands. This gives them more control over income and career
-              growth.
+              Many influencer platforms charge heavy commissions, management
+              fees, or hidden costs that reduce the value of every deal.
+              Creators lose income, while brands lose part of their campaign
+              budget before the collaboration even starts.
             </p>
 
             <p>
-              The platform also helps creators increase visibility and attract
-              better opportunities. With automation tools and smarter systems,
-              creators can focus more on content and less on chasing deals
-              manually.
+              Snaapii is built to remove unnecessary costs and create a more
+              transparent ecosystem. Creators can keep more of their earnings,
+              while brands can invest their budget directly into creators and
+              campaign results.
             </p>
 
             <p>
-              Compared to many influencer marketplaces, Snaapii creates a more
-              empowering experience for creators.
+              This creates a win-win model. Instead of spending on commissions,
+              both sides gain more value from each collaboration. Brands improve
+              ROI, and creators earn what they deserve.
+            </p>
+            <p>
+              When compared with expensive traditional platforms, Snaapii offers
+              a smarter and more cost-efficient solution.
             </p>
 
             {/* BACK BUTTON */}
@@ -97,4 +98,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default Detail4;

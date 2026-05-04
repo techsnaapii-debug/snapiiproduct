@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import Home from "../../../public/static/images/home.png";
-import detail from "../../../public/static/images/detail-1.jpeg";
-const Details = () => {
+import detail from "../../../public/static/images/detail-2.jpeg";
+const Detail1 = () => {
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -11,7 +11,7 @@ const Details = () => {
       {/* TOP GRADIENT SECTION */}
       <div className="details-header text-center text-white">
         <h2 className="fw-bold">
-   Creator Experience Comparison: Snaapii vs Other Platforms
+          Brand Experience Comparison: Snaapii vs Other Platforms
         </h2>
         <p className="mt-2">April 15, 2026</p>
       </div>
@@ -24,26 +24,27 @@ const Details = () => {
           {/* TEXT CONTENT */}
           <div className="details-content">
             <p>
-              Creators often struggle on traditional platforms because they have
-              little control over pricing, communication, and opportunities.
-              Some platforms only show limited campaigns or require agency
-              involvement, which reduces creator freedom. Snaapii is designed to
-              put creators first. Creators can apply to campaigns, negotiate
-              directly, manage their deals, and build long-term partnerships
-              with brands. This gives them more control over income and career
-              growth.
+              Brands need speed, efficiency, and measurable results from
+              influencer marketing. Traditional platforms often make this
+              difficult through slow approvals, outdated systems, and poor
+              transparency.
             </p>
 
             <p>
-              The platform also helps creators increase visibility and attract
-              better opportunities. With automation tools and smarter systems,
-              creators can focus more on content and less on chasing deals
-              manually.
+              Snaapii offers brands a faster and more reliable solution. Brands
+              can discover relevant creators quickly, communicate directly,
+              launch campaigns faster, and manage multiple partnerships in one
+              place.
             </p>
 
             <p>
-              Compared to many influencer marketplaces, Snaapii creates a more
-              empowering experience for creators.
+              The platform also helps improve ROI by reducing unnecessary costs
+              and using smart tools for better creator matching and outreach.
+            </p>
+            <p>
+              For businesses that want to scale influencer marketing without
+              wasting time or budget, Snaapii provides a modern alternative to
+              traditional platforms.
             </p>
 
             {/* BACK BUTTON */}
@@ -97,4 +98,4 @@ const Details = () => {
   );
 };
 
-export default Details;
+export default Detail1;

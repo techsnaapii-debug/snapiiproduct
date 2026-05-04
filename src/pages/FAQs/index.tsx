@@ -1,48 +1,51 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Home from "../../../public/static/images/home.png";
 
 const faqsData = [
   {
     question: "What is Snaapii?",
     answer:
-      "Snaapii is a platform where creators and brands connect for paid campaigns, creator services, and business growth opportunities.",
+      "Snaapii is a creator-brand collaboration platform where brands and creators connect directly, manage campaigns, automate outreach, and grow faster without middlemen or hidden commission fees.",
   },
   {
-    question: "How do creators earn on Snaapii?",
+    question: "How does Snaapii help creators?",
     answer:
-      "Creators earn through paid campaigns, brand collaborations, and services.",
+      "Creators can discover brand campaigns, automate outreach, negotiate directly, keep full earnings, and build long-term partnerships to grow their income and personal brand.",
   },
   {
-    question: "How do brands use Snaapii?",
-    answer: "Brands find creators, run campaigns, and increase engagement.",
+    question: "How does Snaapii help brands?",
+    answer:
+      "Brands can find relevant creators, launch campaigns quickly, automate outreach, manage collaborations efficiently, and achieve better ROI with lower marketing costs.",
   },
   {
-    question: "Are payments secure on Snaapii?",
-    answer: "Yes, payments are secure and reliable.",
+    question: "Is Snaapii safe for payments and collaborations?",
+    answer:
+      "Yes, Snaapii is designed with secure systems, transparent workflows, and reliable payment processes to make collaborations smooth, professional, and trustworthy.",
   },
   {
-    question: "Is Snaapii free to join?",
-    answer: "Yes, it is completely free to join.",
+    question: "Why choose Snaapii over agencies or other platforms?",
+    answer:
+      "Snaapii offers direct collaboration, zero commission, faster execution, smart automation tools, AI-powered growth features, and full transparency for both creators and brands.",
   },
 ];
 
 const FAQs = () => {
-  const [activeIndex, setActiveIndex] = useState(0);
+  // ✅ Correct state (only once, with proper type)
+  const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
-  const toggle = (index) => {
-    setActiveIndex(activeIndex === index ? null : index);
+  const toggle = (index: number) => {
+    setActiveIndex(prev => (prev === index ? null : index));
   };
 
   return (
     <div className="faq-section py-5">
       <div className="container text-center">
-        {/* Badge */}
         <span className="faq-badge mb-2 d-inline-block">
           <span className="faq-icon">?</span> FAQs
-        </span>{" "}
-        {/* Title */}
+        </span>
+
         <h2 className="faq-title mb-4">Frequently Asked Questions</h2>
-        {/* Accordion */}
+
         <div className="faq-wrapper">
           {faqsData.map((item, index) => (
             <div
@@ -64,28 +67,24 @@ const FAQs = () => {
           ))}
         </div>
       </div>
+
       {/* social-section */}
       <section className="social-section d-flex align-items-center">
         <div className="container text-center">
-          {/* Image */}
           <div className="social-img mb-4">
             <img src={Home} alt="app preview" className="img-fluid" />
           </div>
 
-          {/* Heading */}
           <h2 className="social-title">
             Turn Content Into Income. Grow <br />
             Your Brand with Snaapii.
           </h2>
 
-          {/* Description */}
           <p className="social-desc mt-3">
             Join creators and brands using Snaapii for paid campaigns, creator
-            services, AI tools, secure payments, and unlimited growth
-            opportunities.
+            services, AI tools, secure payments, and unlimited growth opportunities.
           </p>
 
-          {/* Buttons */}
           <div className="social-buttons mt-4 d-flex justify-content-center gap-3 flex-wrap">
             <img
               src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg"

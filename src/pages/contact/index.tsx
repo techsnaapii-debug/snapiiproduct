@@ -1,5 +1,4 @@
 import React from "react";
-
 import Home from "../../../public/static/images/home.png";
 import email from "../../../public/icons/email.png";
 import linkedin from "../../../public/icons/linkedin.png";
@@ -97,7 +96,7 @@ const Contact = () => {
 
                 <textarea
                   className="form-control mb-3"
-                  rows="3"
+                rows={3}
                   placeholder="Message"
                 ></textarea>
 

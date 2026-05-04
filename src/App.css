@@ -679,6 +679,8 @@ body {
 /* Content */
 .details-content p {
   color: black;
+  font-size: 18px;
+  white-space: wrap;
 ;
   font-size: 15px;
   line-height: 1.7;
@@ -688,16 +690,43 @@ body {
 
 /* Button */
 .back-btn {
-  background: #7b2ff7;
+  padding: 10px 22px;
+  border-radius: 999px; /* pill shape */
+  border: 1px solid #c4b5fd;
+
+  background: linear-gradient(
+    135deg,
+    #c4b5fd,
+    #8b5cf6
+  );
+
   color: #fff;
-  border-radius: 25px;
-  padding: 8px 20px;
+  font-weight: 500;
+  font-size: 14px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.25);
 }
 
+/* 🔥 Hover */
 .back-btn:hover {
-  background: #6925d1;
+  background: linear-gradient(
+    135deg,
+    #7c3aed,
+    #6d28d9
+  );
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(124, 58, 237, 0.35);
 }
 
+/* 🔥 Click effect */
+.back-btn:active {
+  transform: scale(0.96);
+}
 
 /* faq section */
 .faq-section {
@@ -915,7 +944,20 @@ body {
   color: #6f42c1;
   font-size: 18px;
 }
+.ai-box{
+ background: transparent !important;
+  
+  
+}
+.ai-box img {
+  width: 50px;
+  height: 50px;
+  background: transparent;
+    object-fit: contain;
 
+  
+  mix-blend-mode: multiply;
+}
 /* Animation */
 @keyframes marquee {
   from {
@@ -932,19 +974,84 @@ body {
     width: 220px;
   }
 }
-/* .why-box {
-  width: 45px;
-  height: 45px;
-  border-radius: 50%;
-  border: 2px solid #6f42c1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* CARD */
+.whysection-card {
+
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  height: 250px;
+  cursor: pointer;
+
+  /* 🔥 DARK BORDER */
+ 
+
+  /* 🔥 STRONG SHADOW */
+
+
+  transition: all 0.3s ease;
 }
 
-/* Image inside circle */
-/* .why-img {
-  width: 22px;
-  height: 22px;
-  object-fit: contain;
-} */
+/* 🔥 GRADIENT BACKGROUND */
+
+
+/* OVERLAY */
+
+.whysection-card {
+
+ background: linear-gradient(
+    135deg,
+    #f3f0ff,
+    #e9e4ff,
+    #ddd6fe
+  );
+  border: 1px solid #c4b5fd;
+  border-radius: 20px;
+  box-shadow: 0 6px 18px rgba(124, 58, 237, 0.12);
+  transition: all 0.3s ease;
+}
+.overlay-box{
+ position: absolute;
+  inset: 0;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  color: #2d1b4e;
+}
+/* 🔥 DARK GRADIENT ON HOVER */
+.whysection-card:hover  {
+    background: linear-gradient(
+    135deg,
+    #e0d9ff,
+    #cfc4ff,
+    #a78bfa
+  );
+  box-shadow: 0 10px 28px rgba(124, 58, 237, 0.18);
+  transform: translateY(-4px);
+}
+
+
+
+/* TEXT */
+.whytext h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.whytext p {
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* ARROW */
+.arrow {
+  align-self: flex-end;
+  font-size: 20px;
+  cursor: pointer;
+  border: linear-gradient(135deg, #8f6ed5, #e9a1d3);
+}
+
+
+
