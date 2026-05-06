@@ -1,20 +1,16 @@
-import { useState, useRef } from "react";
+import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
 // Swiper
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
 import type { Swiper as SwiperType } from "swiper";
 
 // Images
 
 import home from "../../../public/static/images/home1.png";
 import footer from "../../../public/static/images/footer.png";
-import img1 from "../../../public/static/images/mobile.png";
 import img2 from "../../../public/static/images/app.png";
 import img3 from "../../../public/static/images/app1.png";
 import img4 from "../../../public/static/images/app2.png";
@@ -40,7 +36,7 @@ import brandimg3 from "../../../public/static/images/right creator.png";
 import brandimg4 from "../../../public/static/images/right creator.png";
 import brandimg5 from "../../../public/static/images/right creator.png";
 
-const images = [img1, img2, img3, img4, img5, img, img12, img13];
+const images = [img2, img3, img4, img5, img, img12, img13];
 const data = [
   {
     title: "Direct Collaboration. Zero Commission.",
@@ -240,7 +236,7 @@ const groupCards = (data: CardType[]): CardType[][] => {
 
 function Home() {
   const navigate = useNavigate();
-  const swiperRef = useRef(null);
+  // const swiperRef = useRef(null);
 
   const brandSwiperRef = useRef<SwiperType | null>(null);
   const createrSwiperRef = useRef<SwiperType | null>(null);
@@ -343,30 +339,25 @@ function Home() {
           >
             {creatorGrouped.map((group, i) => (
               <SwiperSlide key={i}>
-                <div className="grid">
+                <div className="swipe-grid">
                   {group.map((item, index) => (
                     <div className="card whysection-card" key={index}>
-                      {/* 🔥 Gradient Box */}
+                      {/* Gradient */}
                       <div className="gradient-box"></div>
 
-                      <div className="overlay-box d-flex justify-content-end ">
+                      {/* Content */}
+                      <div className="overlay-box d-flex justify-content-between gap-4">
                         <div className="ai-box">
                           <img
                             src={item.img}
                             alt="icon"
-                            className="img-fluid bg-transparent"
+                            className="img-fluid"
                           />
                         </div>
-                        <div className="whytext ">
+
+                        <div className="whytext">
                           <h4>{item.title}</h4>
                           <p className="col-10">{item.desc}</p>
-                        </div>
-
-                        <div
-                          className="arrow"
-                          onClick={() => navigate(item.link)}
-                        >
-                          →
                         </div>
                       </div>
                     </div>
@@ -376,14 +367,14 @@ function Home() {
             ))}
           </Swiper>
 
-          {/* ✅ Swipe Button */}
-          <div className="d-flex justify-content-center mt-4">
+          {/* Swipe Button */}
+          <div className=" d-flex justify-content-center mt-4">
             <button
               className="swipe-btn"
               onClick={() => createrSwiperRef.current?.slideNext()}
             >
               Swipe
-              <span className="ms-3">
+              <span className="ms-2">
                 <img src={icon} alt="icon" />
               </span>
             </button>
@@ -406,31 +397,32 @@ function Home() {
           >
             {brandGrouped.map((group, i) => (
               <SwiperSlide key={i}>
-                <div className="grid">
+                <div className="swipe-grid">
                   {group.map((item, index) => (
                     <div className="card whysection-card" key={index}>
                       {/* 🔥 Gradient Box */}
                       <div className="gradient-box"></div>
+                      <div className="">
+                        <div className="overlay-box d-flex justify-content-between gap-4">
+                          <div className="ai-box">
+                            <img
+                              src={item.img}
+                              alt="icon"
+                              className="img-fluid bg-transparent"
+                            />
+                          </div>
+                          <div className="whytext">
+                            <h4>{item.title}</h4>
+                            <p className="col-10">{item.desc}</p>
+                          </div>
+                        </div>
+                      </div>
 
-                      <div className="overlay-box d-flex justify-content-end ">
-                        <div className="ai-box">
-                          <img
-                            src={item.img}
-                            alt="icon"
-                            className="img-fluid bg-transparent"
-                          />
-                        </div>
-                        <div className="whytext ">
-                          <h4>{item.title}</h4>
-                          <p className="col-10">{item.desc}</p>
-                        </div>
-
-                        <div
-                          className="arrow"
-                          onClick={() => navigate(item.link)}
-                        >
-                          →
-                        </div>
+                      <div
+                        className="arrow"
+                        onClick={() => navigate(item.link)}
+                      >
+                        →
                       </div>
                     </div>
                   ))}

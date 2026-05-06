@@ -1,9 +1,9 @@
-import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import Home from "../../../public/static/images/home.png";
+// import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import footer from "../../../public/static/images/footer.png";
 import detail from "../../../public/static/images/detail-2.jpeg";
 const Detail1 = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
   const navigate = useNavigate();
 
   return (
@@ -62,10 +62,9 @@ const Detail1 = () => {
       <section className="social-section d-flex align-items-center">
         <div className="container text-center">
           {/* Image */}
-          <div className="social-img mb-4">
-            <img src={Home} alt="app preview" className="img-fluid" />
+             <div className="social-img mb-4">
+            <img src={footer} alt="app preview" className="img-fluid" />
           </div>
-
           {/* Heading */}
           <h2 className="social-title">
             Turn Content Into Income. Grow <br />

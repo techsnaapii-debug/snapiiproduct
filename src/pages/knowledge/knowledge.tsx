@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Home from "../../../public/static/images/home.png";
+import footer from "../../../public/static/images/footer.png";
 
 const tabs = ["All", "Creators", "Brands", "Trends", "AI Tools", "Campaigns"];
 
@@ -10,7 +10,7 @@ const cardsData = [
     category: "Creators",
     title: "Creator Experience Comparison: Snaapii vs Other Platforms",
     date: "April 15, 2026",
-    img: "../public/static/images/detail-1.jpeg",
+    img: "/static/images/detail-1.jpeg",
     link: "/details/1",
   },
   {
@@ -18,7 +18,7 @@ const cardsData = [
     category: "Brands",
     title: "Brand Experience Comparison: Snaapii vs Other Platforms.",
     date: "April 15, 2026",
-    img: "../public/static/images/detail-2.jpeg",
+    img: "/static/images/detail-2.jpeg",
     link: "/detail1/2",
   },
  
@@ -27,7 +27,7 @@ const cardsData = [
     category: "Trends",
     title: "Growth Tools Comparison: Snaapii vs Other Platforms",
     date: "April 15, 2026",
-    img: "../public/static/images/detail-3.jpeg",
+    img: "/static/images/detail-3.jpeg",
     link: "/detail2/3",
   },
   {
@@ -35,7 +35,7 @@ const cardsData = [
     category: "AI Tools",
     title: "Direct Collaboration Comparison: Snaapii vs Other Platforms",
     date: "April 15, 2026",
-    img: "../public/static/images/detail-4.jpeg",
+    img: "/static/images/detail-4.jpeg",
     link: "/detail3/4",
   },
    
@@ -44,7 +44,7 @@ const cardsData = [
     category: "Campaigns",
     title: "Cost Comparison: Snaapii vs Other Platforms",
     date: "April 15, 2026",
-    img: "../public/static/images/detail-5.jpeg",
+    img: "/static/images/detail-5.jpeg",
     link: "/detail4/5",
   },
 ];
@@ -124,8 +124,8 @@ const Knowledge = () => {
       <section className="social-section d-flex align-items-center">
         <div className="container text-center">
           {/* Image */}
-          <div className="social-img mb-4">
-            <img src={Home} alt="app preview" className="img-fluid" />
+           <div className="social-img mb-4">
+            <img src={footer} alt="app preview" className="img-fluid" />
           </div>
 
           {/* Heading */}

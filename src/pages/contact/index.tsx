@@ -1,5 +1,5 @@
-import React from "react";
-import Home from "../../../public/static/images/home.png";
+// import React, { useState } from "react";
+import footer from "../../../public/static/images/footer.png";
 import email from "../../../public/icons/email.png";
 import linkedin from "../../../public/icons/linkedin.png";
 import insta from "../../../public/icons/insta.png";
@@ -123,13 +123,10 @@ const Contact = () => {
       <div className="container text-center">
         
         {/* Image */}
-        <div className="social-img mb-4">
-          <img
-            src={Home}
-            alt="app preview"
-            className="img-fluid"
-          />
-        </div>
+      
+      <div className="social-img mb-4">
+            <img src={footer} alt="app preview" className="img-fluid" />
+          </div>
 
         {/* Heading */}
         <h2 className="social-title">

@@ -1,9 +1,9 @@
-import React from "react";
-import { useParams, useNavigate } from "react-router-dom";
-import Home from "../../../public/static/images/home.png";
+// import React, { useState } from "react";
+import {useNavigate } from "react-router-dom";
+import footer from "../../../public/static/images/footer.png";
 import detail from "../../../public/static/images/detail-3.jpeg";
 const Detail2 = () => {
-  const { id } = useParams();
+  // const { id } = useParams();
   const navigate = useNavigate();
 
   return (
@@ -61,7 +61,7 @@ const Detail2 = () => {
         <div className="container text-center">
           {/* Image */}
           <div className="social-img mb-4">
-            <img src={Home} alt="app preview" className="img-fluid" />
+            <img src={footer} alt="app preview" className="img-fluid" />
           </div>
 
           {/* Heading */}

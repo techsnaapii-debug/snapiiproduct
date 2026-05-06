@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Home from "../../../public/static/images/home.png";
 
+import footer from "../../../public/static/images/footer.png";
 const faqsData = [
   {
     question: "What is Snaapii?",
@@ -34,17 +34,18 @@ const FAQs = () => {
   const [activeIndex, setActiveIndex] = useState<number | null>(null);
 
   const toggle = (index: number) => {
-    setActiveIndex(prev => (prev === index ? null : index));
+    setActiveIndex((prev) => (prev === index ? null : index));
   };
 
   return (
     <div className="faq-section py-5">
-      <div className="container text-center">
-        <span className="faq-badge mb-2 d-inline-block">
-          <span className="faq-icon">?</span> FAQs
-        </span>
-
-        <h2 className="faq-title mb-4">Frequently Asked Questions</h2>
+      <div className="container">
+        <div className="text-center">
+          <span className="faq-badge mb-2 d-inline-block">
+            <span className="faq-icon">?</span> FAQs
+          </span>
+        </div>
+        <h2 className="faq-title mb-4 text-center">Frequently Asked Questions</h2>
 
         <div className="faq-wrapper">
           {faqsData.map((item, index) => (
@@ -53,7 +54,7 @@ const FAQs = () => {
               className={`faq-item ${activeIndex === index ? "active" : ""}`}
               onClick={() => toggle(index)}
             >
-              <div className="d-flex justify-content-between align-items-center">
+              <div className="d-flex justify-content-between ">
                 <h6 className="mb-0">{item.question}</h6>
                 <span className="accordian-icon">
                   {activeIndex === index ? "−" : "+"}
@@ -72,7 +73,7 @@ const FAQs = () => {
       <section className="social-section d-flex align-items-center">
         <div className="container text-center">
           <div className="social-img mb-4">
-            <img src={Home} alt="app preview" className="img-fluid" />
+            <img src={footer} alt="app preview" className="img-fluid" />
           </div>
 
           <h2 className="social-title">
@@ -82,7 +83,8 @@ const FAQs = () => {
 
           <p className="social-desc mt-3">
             Join creators and brands using Snaapii for paid campaigns, creator
-            services, AI tools, secure payments, and unlimited growth opportunities.
+            services, AI tools, secure payments, and unlimited growth
+            opportunities.
           </p>
 
           <div className="social-buttons mt-4 d-flex justify-content-center gap-3 flex-wrap">
